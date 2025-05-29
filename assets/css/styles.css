@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+:root {
+    /* ===== Color Palette ===== */
+    --color-primary: #5C2D1A;         /* Dark chocolate brown - text */
+    --color-secondary: #3f2a18;       /* Deep brown - buttons */
+    --color-accent: #A67648;          /* Medium coffee tone - hover, icons */
+    --color-cream: #f5f0e8;           /* Soft cream - general background */
+    --color-dark: #704014;            /* Footer background */
+    --color-white: #FFFFFF;           /* Clean white */
+
+    /* ===== Typography ===== */
+    --font-primary: 'Poppins', sans-serif;
+    --font-hero: 'Orelega One', 'Poppins', sans-serif;
+
+    --fs-hero: 3.2rem;
+    --fs-title: 2.35rem;
+    --fs-heading: 1.75rem;
+    --fs-subheading: 1.25rem;
+    --fs-body: 1.1rem;
+    --fs-small: 0.875rem;
+
+    --fw-reg: 400;
+    --fw-med: 500;
+    --fw-bold: 700;
+    --fw-ex-bold: 800;
+}
+
+/* ==== Font Size Utility Classes ==== */
+.font-hero {
+  font-family: var(--font-hero);
+}
+
+.fs-hero {
+  font-size: var(--fs-hero);
+}
+.fs-title {
+  font-size: var(--fs-title);
+}
+.fs-heading {
+  font-size: var(--fs-heading);
+}
+.fs-subheading {
+  font-size: var(--fs-subheading);
+}
+.fs-body {
+  font-size: var(--fs-body);
+}
+.fs-small {
+  font-size: var(--fs-small);
+}
+
+.fw-reg {
+  font-weight: var(--fw-reg);
+}
+.fw-med {
+  font-weight: var(--fw-med);
+}
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+.fw-extra-bold {
+  font-weight: var(--fw-ex-bold);
+}
+
+/* ===== Reset Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* ===== Global Styles ===== */
+body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 100vh;
+    background-image: url("../img/bg.png");
+    background-size: cover;         /* Ensures image covers entire area */
+    background-position: center;    /* Keeps focal point centered */
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+    line-height: 1.4;
+}
+
+/* ===== Header Styles ===== */
+header {
+    top: 0;
+    width: 100%;
+    padding: 2rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    position: sticky;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.logo {
+    width: auto;
+    height: 70px;
+    max-width: 100%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem;
+    margin: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-reg);
+    transition: color 0.3s ease;
+}
+
+.nav-links li:nth-child(3) {
+  margin-right: 1rem; /* or try 5rem or 80px */
+}
+
+.nav-links li a:hover {
+    color: var(--color-accent);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--color-primary);
+    transition: 0.3s;
+}
+
+/* ===== Footer Styles ===== */
+footer {
+    background: linear-gradient(135deg, var(--color-primary) 20%, var(--color-dark) 80%);
+    color: var(--color-white);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-reg);
+    padding: 1.5rem;
+    margin-top: auto;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    flex: 1;
+    text-align: left;
+    max-width: 40%;
+}
+
+.footer-left p {
+    margin: 0.5rem;
+}
+
+.footer-center {
+    flex: 1;
+    text-align: left; 
+    margin-left: 0;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+        
+/* Tablet Styles */
+@media (max-width: 900px) {
+    :root {
+        --fs-hero: 2.5rem;
+        --fs-title: 2rem;
+        --fs-heading: 1.5rem;
+        --fs-subheading: 1.1rem;
+        --fs-body: 1rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    :root {
+        --fs-hero: 2rem;
+        --fs-title: 1.75rem;
+        --fs-heading: 1.25rem;
+        --fs-subheading: 1rem;
+        --fs-body: 0.9rem;
+        --fs-small: 0.8rem;
+    }
+
+    header {
+        padding: 0.5rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--color-cream);
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    footer {
+        padding: 1rem;
+    }
+}
+
+/* Animation for smooth transitions */
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        transition: all 0.3s ease;
+    }
+}

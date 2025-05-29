@@ -1,0 +1,158 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endo Café Express</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body>
+    <header class="navbar">
+            <div class="logo-container">
+                <img src="assets/icon/logo.png" alt="Logo de l'entreprise" class="logo">
+            </div>
+
+             <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="product.html">Produits</a></li>
+                    <li><a href="#">À Propos</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero__left">
+                <h1 class="font-hero fs-hero fs-bold">
+                    <span class="block-line">Savourez l’excellence</span>
+                    <span class="block-line word-relative">
+                        à tout moment
+                        <img src="assets/img/beans-left.png" alt="bean-right" class="bean-icon">
+                    </span>
+                </h1>
+                <h2 class="fs-subheading">
+                    Découvrez l’art du café à portée de<br> 
+                    main, 24/7
+                </h2>
+
+                <div class="hero-btn__container">
+                    <a href="#services" class="hero-btn fs-body fw-reg">Nos services</a>
+                </div>
+            </div>
+            <div class="hero__right">
+                <img src="assets/img/coffee_2.png" alt="Image de café 2" class="hero-image" id="photo_1">
+                <video src="assets/vid/coff_m_3.mp4" autoplay muted loop class="hero-video" id="video_1">
+                    Votre navigateur ne supporte pas la vidéo.
+                </video>
+                <video src="assets/vid/coff_f_1.mp4" autoplay muted loop class="hero-video" id="video_2">
+                    Votre navigateur ne supporte pas la vidéo.
+                </video>
+                <img src="assets/img/coffee_1.png" alt="Image de café 1" class="hero-image" id="photo_2">
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="floating-beans">
+                <span class="bean bean-1"><img src="assets/img/beans-left.png" alt=""></span>
+                <span class="bean bean-2"><img src="assets/img/beans-right.png" alt=""></span>
+                <span class="bean bean-3"><img src="assets/img/beans-left.png" alt=""></span>
+                <span class="bean bean-4"><img src="assets/img/beans-right.png" alt=""></span>
+                <span class="bean bean-5"><img src="assets/img/beans-left.png" alt=""></span>
+            </div>
+
+            <div class="services-container">
+                <div class="services-header">
+                    <h2 class="fs-title fw-bold">La Solution</h2>
+                    <h3 class="fs-heading fw-med">à vos besoin</h3>
+                    <div class="accent-line"></div>
+                </div>
+
+                <div class="service-content">
+                    <div class="service-block">
+                        <h4 class="fs-heading fw-bold color-accent">Sans aucun engagement !</h4>
+                        <p class="fs-body">
+                            Nous sommes conscient de la qualité de notre service et c'est pour cette raison que 
+                            vous n'êtes lié à aucun contrat à long terme ou à des engagements contraignants. 
+                            Vous avez la possibilité d'essayer notre service et de le garder tant et aussi 
+                            longtemps que nous respectons nos engagements. C'est une solution sans risque pour 
+                            votre entreprise.
+                        </p>
+                    </div>
+
+                    <div class="service-block">
+                        <h4 class="fs-heading fw-bold">Valeur ajoutée pour votre entreprise</h4>
+                        <p class="fs-body">
+                            Nous sommes conscient de la qualité de notre service et c'est pour cette raison que vous n'êtes
+                            lié à aucun contrat à long terme ou à des engagements contraignants. Vous avez la possibilité
+                            d'essayer notre service et de le garder tant et aussi longtemps que nous respectons nos
+                            engagements. C'est une solution sans risque pour votre entreprise.
+                        </p>
+                    </div>
+
+                    <div class="service-highlight">
+                        <h4 class="fs-heading fw-bold">Remplissage & Entretien réguliers</h4>
+                        <p class="fs-body">
+                            Notre équipe s'occupe du remplissage et de l'entretien régulier des machines distributrices ainsi
+                            que des réparation si nécessaire. Vous pouvez compter sur notre équipe afin de maintenir les
+                            machines en parfait état de fonctionnement et garantir une expérience optimale pour vos employés
+                            et vos visiteurs.
+                        </p>
+                    </div>
+
+                    <div class="service-cards">
+                        <div class="service-card">
+                            <div class="card-icon">📞</div>
+                            <h5 class="fs-subheading fw-bold">Support 24/7</h5>
+                            <p class="fs-small">
+                                Notre équipe est disponible à tout moment afin de répondre à vos questions, demandes
+                                ou pour vous assurer un fonctionnement sans faille de nos machines distributrices 
+                                alimentaires.
+                            </p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="card-icon">⚙️</div>
+                            <h5 class="fs-subheading fw-bold">Service Personalisé</h5>
+                            <p class="fs-small">
+                                Nous sommes conscient que chaque entreprise est différente et a des besoins uniques, c'est 
+                                pourquoi nous sommes fier de vous offrir un service personnalisé pour vous satisfaire que 
+                                ce soit dans la sélection des machines ou des produits présents à l'intérieur de ceux-ci.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="service-block">
+                        <h4 class="fs-heading fw-bold">Options Saines</h4>
+                        <p class="fs-body">
+                            Options saines garanties! Notre service de machines distributrices vous assurent une gamme
+                            de produits sains et équilibrés, de façon à satisfaire toute la clientèle.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>Contact</p>
+                <p>+242 06 182 0616</p>
+                <p>info@endocafe-express.com</p>
+                <p>Brazzaville-Congo</p>
+            </div>
+            <div class="footer-center">
+                <p>&copy; 2025 Endo Café Express. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
