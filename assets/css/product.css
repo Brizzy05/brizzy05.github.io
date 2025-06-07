@@ -2,3 +2,217 @@ body {
     background: linear-gradient(110deg, var(--color-cream), #f6ecda);
     
 }
+
+.flavours-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.flavours {
+    background-color: var(--color-white);
+    margin: 1rem auto;
+    padding: 2rem;
+    border-radius: 40px;
+    max-width: min(1200px, 100%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.carousel {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: grid;
+    gap: 2rem;
+    grid-auto-flow: column;
+    grid-auto-columns: 30%;
+    
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    > li {
+        scroll-snap-align: center;
+    }
+
+    &::scroll-button(*) {
+        color: var(--color-primary);
+        font-size: 12px;
+        border-radius: 20px;
+    }
+
+    &::scroll-button(right) {
+        content: "⮕" / "scroll right";
+    }
+
+    &::scroll-button(left) {
+        content: "⬅" / "scroll left";
+    }
+
+    &::scroll-button(*):focus-visible {
+    outline-offset: 2px;
+  }
+}
+
+.flavour-card {
+  background: #f8f1e9;
+  border-radius: 20px;
+  margin: 1rem 0;
+  padding: 1rem 2rem;
+
+  max-width: min(350px, 100%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.flavour-card:hover {
+  transform: translateY(-5px);
+}
+
+.flavour-icon {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 40%;
+  margin-bottom: 1rem;
+  border: 3px solid transparent;
+}
+
+.flavour-card h3 {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-bold);
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.flavour-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    font-size: var(--fs-small);
+    color: var(--color-primary);
+    text-align: left;
+}
+
+.product-section {
+  background: var(--color-cream);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: var(--fs-title);
+  font-family: var(--font-hero);
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: var(--fs-body);
+  color: var(--color-primary);
+  margin-bottom: 3rem;
+}
+
+.category-title {
+  font-size: var(--fs-heading);
+  font-weight: var(--fw-bold);
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.category-subtitle {
+  font-size: var(--fs-body);
+  color: var(--color-primary);
+  margin-bottom: 2.5rem;
+}
+
+/* Grid layout */
+.product-grid {
+  display: grid;
+  width: 60%;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3.5rem;
+}
+
+/* Product Card */
+.product-card {
+  background: #fdf6ec;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Image section */
+.product-image {
+  position: relative;
+  padding: 2rem;
+  background: #faeedf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 260px;
+}
+
+.product-image img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Badge */
+.badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-med);
+}
+
+/* Info section */
+.product-info {
+  padding: 1.5rem 1rem;
+  background: #fff;
+  text-align: left;
+}
+
+.product-info h4 {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-bold);
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.product-info p {
+  font-size: var(--fs-small);
+  color: var(--color-primary);
+  margin-bottom: 1.2rem;
+}
+
+/* Button */
+.btn.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  font-weight: var(--fw-med);
+  font-size: var(--fs-small);
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+  background-color: var(--color-dark);
+}
