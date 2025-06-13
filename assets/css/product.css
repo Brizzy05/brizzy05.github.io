@@ -78,6 +78,22 @@ body {
   border: 3px solid transparent;
 }
 
+#cafe {
+  object-position: 90% center;
+}
+
+#cafe-lait {
+  object-position: 100% center;
+}
+
+#choco {
+  object-position: 90% center;
+}
+
+#the {
+  object-position: 70% center;
+}
+
 .flavour-card h3 {
   font-size: var(--fs-body);
   font-weight: var(--fw-bold);
@@ -130,6 +146,7 @@ body {
   display: grid;
   width: 60%;
   margin: 0 auto;
+  margin-bottom: 4rem;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 3.5rem;
 }
