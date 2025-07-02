@@ -233,3 +233,81 @@ body {
 .btn.btn-primary:hover {
   background-color: var(--color-dark);
 }
+
+
+@media (max-width: 768px) {
+  /* General adjustments */
+  body {
+    padding: 1rem;
+  }
+
+  .flavours {
+    padding: 1.5rem 1rem;
+    border-radius: 20px;
+  }
+
+  .carousel {
+    grid-auto-columns: 80%;
+    gap: 1rem;
+  }
+
+  .flavour-card {
+    padding: 1rem;
+    max-width: 90%;
+    min-width: 300px;
+    margin: 0 auto;
+  }
+
+  .flavour-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .product-section {
+    padding: 2rem 1rem;
+  }
+
+  .product-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .product-card {
+    max-width: 90%;
+    min-width: 450px;
+    margin: 0 auto;
+  }
+
+  .product-image {
+    height: 200px;
+    padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: calc(var(--fs-title) * 0.8);
+  }
+
+  .section-subtitle {
+    font-size: calc(var(--fs-body) * 0.9);
+    margin-bottom: 2rem;
+  }
+
+  .category-title {
+    font-size: calc(var(--fs-heading) * 0.9);
+  }
+
+  .category-subtitle {
+    font-size: calc(var(--fs-body) * 0.9);
+    margin-bottom: 1.5rem;
+  }
+
+  .btn.btn-primary {
+    font-size: var(--fs-body);
+    padding: 0.5rem 1rem;
+  }
+
+  .product-info {
+    text-align: center;
+  }
+}
