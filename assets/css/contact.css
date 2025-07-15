@@ -1,17 +1,15 @@
 body {
     background: linear-gradient(110deg, var(--color-cream), #f6ecda);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    
 }
 
 .contact-section {
     background-color: var(--color-cream);
     padding: 4rem 2rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-section h1 {
